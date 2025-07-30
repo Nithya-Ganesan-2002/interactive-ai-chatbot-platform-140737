@@ -1,0 +1,4 @@
+{
+    "command": "pytest",
+    "working_directory": "/home/kavia/workspace/code-generation/interactive-ai-chatbot-platform-140737/ai_chatbot_backend"
+}

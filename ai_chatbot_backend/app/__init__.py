@@ -1,6 +1,9 @@
 from flask import Flask
 from flask_cors import CORS
-from .routes.health import blp
+from .routes.health import blp as health_blp
+from .routes.auth import blp as auth_blp
+from .routes.chat import blp as chat_blp
+from .routes.users import blp as users_blp
 from flask_smorest import Api
 
 
@@ -16,4 +19,7 @@ app.config["OPENAPI_SWAGGER_UI_URL"] = "https://cdn.jsdelivr.net/npm/swagger-ui-
 
 
 api = Api(app)
-api.register_blueprint(blp)
+api.register_blueprint(health_blp)
+api.register_blueprint(auth_blp)
+api.register_blueprint(chat_blp)
+api.register_blueprint(users_blp)
